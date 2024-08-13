@@ -1,0 +1,90 @@
+<single-spa-router>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background-color: #f1f5eb;
+    }
+
+    main {
+      width: 100%;
+      padding-top: 150px;
+      margin-bottom: 120px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 120px;
+    }
+
+    body > div,
+    body > div > div {
+      position: absolute;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .section-heading {
+      width: 630px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .section-heading > p {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      gap: 10px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1.4px;
+      font-size: 14px;
+      color: #2437ac;
+    }
+
+    .section-heading > h1 {
+      font-size: 70px;
+      font-weight: bold;
+      margin-bottom: 41px;
+      line-height: 90px;
+      width: 660px;
+      text-transform: capitalize;
+      color: #2437ac;
+    }
+
+    .section-heading > h2 {
+      line-height: 60px;
+      margin-top: 10px;
+      color: #2437ac;
+    }
+
+    .container--lg .section-heading {
+      width: 630px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+    }
+  </style>
+
+  <application name="@link/header"></application>
+  <main>
+    <route default>
+      <application name="@link/homepage"></application>
+      <application name="@link/about"></application>
+    </route>
+  </main>
+</single-spa-router>
